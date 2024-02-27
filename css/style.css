@@ -1,6 +1,4 @@
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+
 .sep {
   border: 0;
   width: 3em;
@@ -16,6 +14,9 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   position: relative; /* Set position relative */
+  overflow: hidden; /* Ensure child elements do not overflow */
+  margin: 0 10px;
+  
 }
 
 .submit-button {
@@ -133,21 +134,8 @@
   width: 100%;
   background: rgba(17, 17, 17, 0.9);
 }
-.mast > header {
-  z-index: 2;
-  position: relative;
-}
-.mast__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: 50%;
-}
+
+
 .mast__header {
   padding: 5%;
 }
@@ -989,41 +977,41 @@
 
 
 .portfolio {
-  height: 800px;
+  height: auto; /* Adjusted height to auto */
   background: rgb(255, 255, 255);
-  
+  width: auto;
 }
+
 .portfolio-header {
-  color: white; /* Change to a color that contrasts with the background */
-  
-  
+  color: #000; /* Adjusted text color for better contrast */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Lato', sans-serif;
 }
+
 .portfolio-h1 {
-  color: rgb(0, 0, 0);
-  padding: 50px;
+  padding: 2rem; /* Adjusted padding for better spacing */
   font-family: 'Open Sans', sans-serif;
-font-size: 1.5em;
-font-weight: lighter;
-letter-spacing: 0.3em;
-text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: lighter;
+  letter-spacing: 0.1em; /* Reduced letter spacing */
+  text-transform: uppercase;
 }
 
 
 .grid {
-  
   display: grid;
   width: auto;
   grid-gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Adjusted to have flexible layout */
 }
+
 @media (max-width: 60em) {
   .grid {
-    grid-gap: 3rem;
-    padding: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Adjusted for smaller screens */
+    grid-gap: 2rem; /* Adjusted grid gap for smaller screens */
+    padding: 2rem; /* Adjusted padding for smaller screens */
   }
 }
 
@@ -1035,16 +1023,18 @@ text-transform: uppercase;
   align-items: center;
   background-color: #fff;
   border-radius: 0.4rem;
-  overflow: hidden;
+  
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
- 
+  width: auto;
 }
+
 .grid .card:hover {
   transform: translateY(-0.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
 }
+
 .grid .card__img {
   display: block;
   width: 100%;
@@ -1059,7 +1049,6 @@ text-transform: uppercase;
   padding: 1.5rem;
   height: 100%;
 }
-
 
 .grid .card__header {
   font-size: 2rem; /* Adjust the font size */
@@ -1085,7 +1074,6 @@ text-transform: uppercase;
   border: 1px solid #000; /* Border color */
   border-radius: 0.4rem;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
- 
   align-self: center; /* Align the button to the center */
   text-decoration: none; /* Remove underline */
 }
@@ -1100,4 +1088,3 @@ text-transform: uppercase;
   margin-left: 1rem;
   transition: 0.2s;
 }
-

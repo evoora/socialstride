@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
+    width: 100%;
 }
 @keyframes fadeIn {
     from {
@@ -17,7 +18,8 @@ body {
     background-image: url('./images/top-img1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    overflow: hidden;
+    
 }
 .navbar {
     display: flex;
@@ -99,6 +101,17 @@ text-align: center;
   backdrop-filter: blur(5px);
   background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
   border: 1px solid rgba(255, 255, 255, 0.171); /* Adjust color and opacity as needed */
+  overflow: hidden;
+  
+}
+.main-header-container{
+    text-align: center;
+    position: absolute; /* Position the header */
+      top: 0; /* Align the header to the top of its containing element */
+      left: 0; /* Align the header to the left of its containing element */
+      width: 100%; /* Make the header span the entire width */
+      z-index: 2; /* Ensure the header appears on top of other elements */
+      margin-bottom:  100px; 
 }
 @keyframes textShine {
     0% {
@@ -117,6 +130,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
+
     
   }
   
