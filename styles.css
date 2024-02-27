@@ -15,7 +15,7 @@ body {
   }
 
 .top-section {
-    background-image: url('./images/top-img1.jpg');
+    background-image: url('images/top-img1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
